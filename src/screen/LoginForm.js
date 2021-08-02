@@ -3,6 +3,8 @@ import {TextInput, View, StyleSheet, KeyboardAvoidingView, Text, ScrollView, Tou
 
 
 
+
+
 export default class LoginForm extends Component {
     state = {
         userName: '',
@@ -10,7 +12,10 @@ export default class LoginForm extends Component {
     };
     openHome = (navigation) => {
         navigation.navigate('app')
-    }
+    };
+
+
+
     render() {
         const {navigation} = this.props;
         return (

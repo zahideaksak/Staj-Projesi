@@ -7,6 +7,8 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Main from "./pages/Main";
 import DrawerMenu from "./components/DrawerMenu";
+import RegisterForm from "./pages/RegisterForm";
+import FormPage from "./pages/FormPage";
 
 const AuthNavigator = createStackNavigator({
     Login: Login,
@@ -15,12 +17,13 @@ const AuthNavigator = createStackNavigator({
 });
 const AppNavigator = createStackNavigator({
     Main: Main,
-    Home: Home,
+    RegisterForm: RegisterForm,
+    FormPage: FormPage,
 }, {
     mode: 'modal',
 });
 const DrawerNavigator = createDrawerNavigator({
-    Main: AppNavigator,
+    Home: AppNavigator,
 }, {
     contentComponent:DrawerMenu
 });

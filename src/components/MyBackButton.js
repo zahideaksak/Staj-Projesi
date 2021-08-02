@@ -7,7 +7,7 @@ export default class MyBackButton extends Component {
             <View style={styles.headerBackButton}>
                 <TouchableOpacity {...this.props}
                                   style={styles.backButton}>
-                    <Icon name="left" size={40} color='red'/>
+                    <Icon name="left" size={40} color='#fff'/>
                 </TouchableOpacity>
             </View>
         );
@@ -15,10 +15,11 @@ export default class MyBackButton extends Component {
 }
 const styles = StyleSheet.create({
     headerBackButton:{
-        marginTop:'10%',
+
     },
     backButton: {
-        marginLeft: '8%',
+        marginLeft: '2%',
+
 
     },
 });

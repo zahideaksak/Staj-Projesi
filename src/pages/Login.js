@@ -12,6 +12,7 @@ import {
 import LoginForm from '../screen/LoginForm';
 import RegisterForm from './RegisterForm';
 
+
 export default class Login extends Component {
     state = {
         isLogin: true,
