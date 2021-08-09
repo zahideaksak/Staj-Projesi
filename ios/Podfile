@@ -54,6 +54,10 @@ target 'StajPro' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'react-native-sqlite-storage', :path => '../node_modules/react-native-sqlite-storage'
+
+  pod 'RNSqlite2', :path => '../node_modules/react-native-sqlite-2'
+
   target 'StajProTests' do
     inherit! :complete
     # Pods for testing

@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import {Image, StyleSheet, Text, View, TouchableOpacity, ScrollView} from "react-native";
+import Icon from 'react-native-vector-icons/AntDesign';
 
 export default class Card extends Component {
+    static navigationOptions = {
+        title: 'Yemek Listesi'
+    };
+
     render() {
         return (
             <View style={styles.cardContainer}>
-                <ScrollView>
                     <TouchableOpacity style={styles.cardButton}>
                         <Image
                             style={styles.cardImage}
@@ -13,14 +17,13 @@ export default class Card extends Component {
 
                         />
                         <View style={styles.textArea}>
-                            <Text style={styles.cardText1}>29.07.2021</Text>
+                            <Text style={styles.cardText1}>Menü</Text>
                             <Text style={styles.cardText2}>- Yemek İsimleri</Text>
                             <Text style={styles.cardText2}>- Yemek İsimleri</Text>
                             <Text style={styles.cardText2}>- Yemek İsimleri</Text>
                             <Text style={styles.cardText2}>- Yemek İsimleri</Text>
                         </View>
                     </TouchableOpacity>
-                </ScrollView>
             </View>
 
         );
@@ -33,7 +36,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginHorizontal: 10,
         marginTop: 10,
-        elevation: 2
+        elevation: 2,
+        paddingVertical: 20
 
     },
     cardImage: {
@@ -47,9 +51,10 @@ const styles = StyleSheet.create({
     },
     cardText1: {
         fontWeight: 'bold',
-        fontSize: 20,
-        marginVertical: 15,
-        marginHorizontal: 60
+        fontSize: 23,
+        marginVertical: 5,
+        marginBottom: 18,
+        marginHorizontal: 20
     },
     cardText2: {
         fontSize: 15,

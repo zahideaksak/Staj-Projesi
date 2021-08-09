@@ -7,10 +7,12 @@ import {
     ScrollView,
     StyleSheet,
     KeyboardAvoidingView,
+    Alert, Image
 } from "react-native";
 import MyBackButton from "../components/MyBackButton";
 import LoginForm from "../screen/LoginForm";
 import Main from "./Main";
+
 
 export default class RegisterForm extends Component {
 
@@ -27,10 +29,12 @@ export default class RegisterForm extends Component {
                 <View style={styles.container}>
 
                     <View style={styles.headBackground}/>
-                    <View style={{backgroundColor: '#fff', bottom: '2%'}}>
-                        <View style={{justifyContent: 'flex-start'}}>
-                            <MyBackButton
-                                onPress={() => this.props.navigation.navigate('LoginForm')}></MyBackButton>
+                    <View style={{backgroundColor: '#fff', bottom: '2%', borderRadius: 75, marginBottom: 15}}>
+                        <View style={{justifyContent: 'center'}}>
+                            <Image
+                                style={styles.gsbLogo}
+                                source={require('../assets/gsblogo.png')}
+                            />
                         </View>
                     </View>
                     <View>
@@ -94,24 +98,12 @@ const styles = StyleSheet.create({
     logo1: {
         textAlign: 'center',
         fontSize: 40,
-
         color: '#f2f2f2',
         marginBottom: 15
     },
-    logo2: {
-        textAlign: 'center',
-        fontSize: 17,
-        color: '#e9e9e9',
-        marginBottom: 15
-    },
-    logoDescription: {
-        textAlign: 'center',
-        color: '#e9e9e9',
-        fontSize: 17,
-    },
     loginArea: {
         marginHorizontal: 50,
-        marginVertical: 50,
+        marginVertical: 30,
         backgroundColor: '#fff',
         padding: 20,
         borderRadius: 5,
@@ -121,12 +113,12 @@ const styles = StyleSheet.create({
             width: 0,
             height: 2
         },
-        paddingVertical: 50,
-        paddingHorizontal: 50,
+        paddingVertical: 30,
+        paddingHorizontal: 40,
         elevation: 2
     },
     input: {
-        height: 40,
+        height: 45,
         paddingHorizontal: 5,
         borderWidth: 2,
         borderRadius: 4,
@@ -161,7 +153,11 @@ const styles = StyleSheet.create({
     },
     inputText: {
         marginBottom: 5
-    }
+    },
+    gsbLogo: {
+        width: 140,
+        height: 140,
+    },
 });
 
 

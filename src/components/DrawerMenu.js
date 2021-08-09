@@ -15,6 +15,7 @@ import MyStatusBar from "./MyStatusBar";
 import Main from "../pages/Main";
 import Icon from 'react-native-vector-icons/AntDesign';
 import FormPage from "../pages/FormPage";
+import Card from "./Card";
 
 export default class DrawerMenu extends Component {
     _navigateToScreen = (route) => {

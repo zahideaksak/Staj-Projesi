@@ -9,6 +9,7 @@ import Main from "./pages/Main";
 import DrawerMenu from "./components/DrawerMenu";
 import RegisterForm from "./pages/RegisterForm";
 import FormPage from "./pages/FormPage";
+import Card from "./components/Card";
 
 const AuthNavigator = createStackNavigator({
     Login: Login,
@@ -19,13 +20,14 @@ const AppNavigator = createStackNavigator({
     Main: Main,
     RegisterForm: RegisterForm,
     FormPage: FormPage,
+    Card: Card,
 }, {
     mode: 'modal',
 });
 const DrawerNavigator = createDrawerNavigator({
     Home: AppNavigator,
 }, {
-    contentComponent:DrawerMenu
+    contentComponent: DrawerMenu
 });
 const TabNavigator = createBottomTabNavigator({
     Main: Main,
@@ -42,7 +44,7 @@ const TabNavigator = createBottomTabNavigator({
 const MainNavigator = createSwitchNavigator({
     auth: AuthNavigator,
     app: DrawerNavigator,
-
+    card: Card,
 }, {
     initialRouteName: 'auth'
 });

@@ -1,5 +1,14 @@
 import React, {Component} from 'react';
-import {Image, ScrollView, Text, TextInput, View, StyleSheet, TouchableOpacity, BackHandler} from "react-native";
+import {
+    Image,
+    ScrollView,
+    Text,
+    TextInput,
+    View,
+    StyleSheet,
+    TouchableOpacity,
+    KeyboardAvoidingView
+} from "react-native";
 
 export default class FormPage extends Component {
 
@@ -9,36 +18,38 @@ export default class FormPage extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <ScrollView>
-                    <View style={styles.head}>
-                        <Image
-                            style={styles.gsbLogo}
-                            source={require('../assets/gsblogo.png')}
-                        />
-                        <View style={styles.head2}>
-                            <Text style={styles.headText}>T.C. GENÇLİK VE</Text>
-                            <Text style={styles.headText}>SPOR BAKANLIĞI</Text>
-                        </View>
-                    </View>
-                    <View style={styles.formArea}>
-                        <Text style={styles.inputText}>Şikayetleriniz: </Text>
-                        <TextInput
-                            style={styles.input}
-                            placeholderTextColor={'#545454'}
-                        />
-                        <Text style={styles.inputText}>Önerileriniz: </Text>
-                        <TextInput
-                            style={styles.input}
-                            placeholderTextColor={'#545454'}
-                        />
-                        <TouchableOpacity>
-                            <Text style={styles.buttonText}>GÖNDER</Text>
-                        </TouchableOpacity>
-                    </View>
 
-                </ScrollView>
-            </View>
+                <View style={styles.container}>
+                    <ScrollView>
+                        <View style={styles.head}>
+                            <Image
+                                style={styles.gsbLogo}
+                                source={require('../assets/gsblogo.png')}
+                            />
+                            <View style={styles.head2}>
+                                <Text style={styles.headText}>T.C. GENÇLİK VE</Text>
+                                <Text style={styles.headText}>SPOR BAKANLIĞI</Text>
+                            </View>
+                        </View>
+                        <View style={styles.formArea}>
+                            <Text style={styles.inputText}>Şikayetleriniz: </Text>
+                            <TextInput
+                                style={styles.input}
+                                placeholderTextColor={'#545454'}
+                            />
+                            <Text style={styles.inputText}>Önerileriniz: </Text>
+                            <TextInput
+                                style={styles.input}
+                                placeholderTextColor={'#545454'}
+                            />
+                            <TouchableOpacity>
+                                <Text style={styles.buttonText}>GÖNDER</Text>
+                            </TouchableOpacity>
+                        </View>
+
+                    </ScrollView>
+                </View>
+
         );
     }
 }
